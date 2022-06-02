@@ -51,7 +51,7 @@
             </div>
             <div class="form-group">
                 <label for="numberhouse">Número:</label>
-                <input type="text" class="form-control @error('numberhouse') is-invalid @enderror" id="numberhouse" name="numberhouse" placeholder="Digite o número da casa" value="{{ old('numberhouse') }}">
+                <input type="text" class="form-control @error('numberhouse') is-invalid @enderror" id="numberhouse" name="numberhouse" placeholder="Digite o número da casa" pattern="[0-9]+$" value="{{ old('numberhouse') }}">
                 @error('numberhouse')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
