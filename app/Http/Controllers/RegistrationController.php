@@ -36,6 +36,12 @@ class RegistrationController extends Controller
     public function update(Request $request) {
         $event = Client::findOrFail($request->id)->update($request->all());
 
-        return redirect('/')->with('msg', 'Cliente editado com sucesso');
+        return redirect('clients')->with('msg', 'Cliente editado com sucesso');
+    }
+
+    public function destroy($id) {
+        Client::findOrFail($id)->delete();
+
+        return redirect('clients')->with('msg', 'Cliente excluído com sucesso');
     }
 }

@@ -19,3 +19,4 @@ Route::get('/clients', [RegistrationController::class, 'listClient']);
 Route::post('/create', [RegistrationController::class, 'store']);
 Route::get('/clients/edit/{id}', [RegistrationController::class, 'edit']);
 Route::put('/clients/update/{id}', [RegistrationController::class, 'update']);
+Route::delete('/clients/{id}', [RegistrationController::class, 'destroy']);

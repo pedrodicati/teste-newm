@@ -22,11 +22,13 @@
                     </div>
                     <div class="card-button">
                         <a href="clients/edit/{{ $clients->id }}">
-                            <button type="button" class="btn btn-info">Editar</button>
+                            <button type="button" class="btn btn-info edit-btn">Editar</button>
                         </a>
-                        <a href="">
-                            <button type="button" class="btn btn-danger">Apagar</button>
-                        </a>
+                        <form action="clients/{{ $clients->id }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger delete-btn">Excluir</button>
+                        </form>
                     </div>
                 </div>
             @endforeach

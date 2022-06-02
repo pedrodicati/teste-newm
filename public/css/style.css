@@ -92,6 +92,10 @@ header .nav-item {
     margin: 10px;
 }
 
+.card-button form {
+    display: inline-block;
+}
+
 /* footer */
 
 footer {
