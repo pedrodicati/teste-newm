@@ -69,6 +69,10 @@ header .nav-item {
     justify-content: center;
 }
 
+.card:hover {
+    background-color: #e1ffe1;
+}
+
 #cards-container .card {
     flex: 1 1 20%;  
     max-width: 25%;
@@ -95,6 +99,10 @@ header .nav-item {
 
 .card-button form {
     display: inline-block;
+}
+
+#client-container .form-search {
+    margin-bottom: 10px;
 }
 
 /* footer */

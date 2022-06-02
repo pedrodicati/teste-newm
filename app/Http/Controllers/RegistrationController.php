@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Client;
 use Symfony\Component\HttpFoundation\RequestStack;
+use App\Http\Requests\ClientStoreRequest;
 
 class RegistrationController extends Controller
 {
@@ -15,12 +16,21 @@ class RegistrationController extends Controller
     }
     
     public function listClient() {
-        $client = Client::paginate(10);
+        $search = request('search');
 
+        if($search) {
+            $client = Client::where([
+                ['name', 'like', '%'.$search.'%']
+            ])->paginate(10);
+        }
+        else {
+            $client = Client::paginate(10);
+        }
+        
         return view('clients', ['client' => $client]);
     }
 
-    public function store(Request $request) {
+    public function store(ClientStoreRequest $request) {
                
         $atributos = $request->all();
         

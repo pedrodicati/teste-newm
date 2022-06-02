@@ -6,6 +6,9 @@
 
     <div id="client-container" class="col-md-12">
         <h2>Clientes cadastrados</h2>
+        <form action="clients" method="get">
+            <input type="text" class="form-control form-search" id="search" name="search" placeholder="Procure por um cliente...">
+        </form>
         <div id="cards-container" class="row">
             @foreach($client as $clients)
                 <div class="card col-md-3">
