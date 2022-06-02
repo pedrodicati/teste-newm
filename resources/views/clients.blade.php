@@ -32,7 +32,8 @@
                     </div>
                 </div>
             @endforeach
-        </div>
+            {{ $client->links() }}
+        </div> 
     </div>
     
 @endsection

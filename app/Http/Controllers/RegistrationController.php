@@ -8,12 +8,14 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
 class RegistrationController extends Controller
 {
+    private $paginate = 10;
+
     public function index() {
         return view('welcome');
     }
     
     public function listClient() {
-        $client = Client::all();
+        $client = Client::paginate(10);
 
         return view('clients', ['client' => $client]);
     }

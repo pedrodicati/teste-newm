@@ -34,9 +34,9 @@ header .nav-item {
 }
 
 .msg {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
+    background-color: #76e28f;
+    color: #05330f;
+    border: 1px solid #76e28f;
     width: 100%;
     margin-bottom: 0;
     text-align: center;
@@ -66,6 +66,7 @@ header .nav-item {
 
 #cards-container {
     display: flex;
+    justify-content: center;
 }
 
 #cards-container .card {
