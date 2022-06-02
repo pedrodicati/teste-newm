@@ -21,8 +21,12 @@
                         <p class="card-observation"><strong>Observação:</strong> {{ $clients->observation }}</p>
                     </div>
                     <div class="card-button">
-                        <button type="button" class="btn btn-info">Editar</button>
-                        <button type="button" class="btn btn-danger">Apagar</button>
+                        <a href="clients/edit/{{ $clients->id }}">
+                            <button type="button" class="btn btn-info">Editar</button>
+                        </a>
+                        <a href="">
+                            <button type="button" class="btn btn-danger">Apagar</button>
+                        </a>
                     </div>
                 </div>
             @endforeach
